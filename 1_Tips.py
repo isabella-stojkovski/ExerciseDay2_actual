@@ -33,32 +33,10 @@ plt.scatter(df["total_bill"], df["tip"], c=df["day"].map(colors))
 ax.set(ylabel="Tip", xlabel="Total bill", title="Tip paid by total bill amount")
 ax.plt.legend()
 
-
 fig, axes = plt.subplots(1,2,sharex=True,sharey=True)
 df_male.plot.scatter(x="total_bill", y="tip", c=df_male["day"].map(colors),ax=axes[0], ylabel="Tip", xlabel="Total bill", title="Male_Tip paid by total bill amount")
 df_female.plot.scatter(x="total_bill", y="tip", c=df_female["day"].map(colors),ax=axes[1], ylabel="Tip", xlabel="Total bill", title="Female_Tip paid by total bill amount")
 df_male.legend()
 df_female.legend()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+fig.savefig('output/tips.pdf')
